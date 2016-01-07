@@ -12,10 +12,10 @@ I got into university to earn a degree in Electrical Engineering where I was int
 
 During that time I got an internship at [Accenture](https://www.accenture.com) where I could work my way up and by the time I left, 5 years later, I was a Senior Software Engineer and Team Leader.
 
-With the rise of mobile development, web applications and StartUp culture I felt drawn to this new world and wanted to be part of it. To achieve that I co-founded two tech companies: [Brick](http://www.bricksoftwares.com) - a company that helps other companies grow their business through the Internet, and Cient - an online marketplace for online live sessions. In both I was in charge of the back end development, and server infrastructure.
+With the rise of mobile development, web applications and startup culture I felt drawn to this new world and wanted to be part of it. To achieve that I co-founded two tech companies: [Brick](http://www.bricksoftwares.com) - a company that helps other companies grow their business through the internet, and Cient - an online marketplace for online live sessions. In both I was in charge of the back end development, and server infrastructure.
 
 Feeling the need to face new challenges and explore the latest technologies in the area I joined Comunidade de Práticas.
 
-Get in touch with me by [email](mailto:saviogl@gmail.com).
+To get in touch feel free to send me an [email](mailto:saviogl@gmail.com).
 
 {% include footer.html %}
