@@ -9,10 +9,10 @@ highlighter: pygments
 gems: [jekyll-paginate]
 paginate: 20
 baseurl: /
-domain_name: 'http://yourblog-domain.com'
-google_analytics: 'UA-XXXXXXXX-X'
-disqus: false
-disqus_shortname: 'your-disqus-shortname'
+domain_name: 'http://saviolucena.com'
+google_analytics: 'UA-72132341-1'
+disqus: true
+disqus_shortname: 'saviolucena'
 
 # Details for the RSS feed generator
 url:            'http://saviolucena.com'
