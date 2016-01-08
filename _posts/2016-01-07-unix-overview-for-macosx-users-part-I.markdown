@@ -1,7 +1,7 @@
 ---
 title:  "Unix overview for Mac OS X users - Part I"
 date:   2016-01-07 21:00:00
-description: A Unix basic overview to allow Mac OS X users understand the powerfull operating systema underneath Mac OS X
+description: A Unix basic overview to allow Mac OS X users understand the powerfull operating system underneath Mac OS X
 ---
 
 #Motivation
