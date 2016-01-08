@@ -8,7 +8,7 @@ description: A Unix basic overview to allow Mac OS X users understand the powerf
 
 Working as a web developer I found myself typing a lot of Unix commands, either to install a new cli tool, or to scaffold a new project, or to override Unix file's permissions and owenership, etc... Anyway the list goes on and on when it comes to the use of Unix commands on a web developer's work day. 
 
-At some point I realized that I was dropping a bunch of commands on the terminal, and for some of then I wasn't even understanding what I was doing, I just knew that I had to type it in order to make something work. That bothered me. Bothered me a LOT. Being an Engineer I don't few confortable not knowing things, specially things that are part of my daily routine, part of my job.
+At some point I realized that I was dropping a bunch of commands on the terminal, and for some of then I wasn't even understanding what I was doing, I just knew that I had to type it in order to make something work. That bothered me. Bothered me a LOT. Being an Engineer I don't feel confortable not knowing things, specially things that are part of my daily routine, part of my job.
 
 Decided to fill that knowledge gap and to get more familiar with the system that operates my computer I resorted to the Internet to achieve that goal, and this series of posts aim to share with you a little bit from what I've learned and hopefully help you better understand what you're doing.
 
