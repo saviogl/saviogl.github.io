@@ -6,19 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{{ site.name }}{% if page.title %} - {{ page.title }}{% endif %}</title>
-  {% if page.description %}
-    <meta name="description" content="{{ page.description }}">
-  {% else %}
-    <meta name="description" content="{{ site.meta_description }}">
-  {% endif %}
+  <meta name="description" content="{% if page.description %} {{ page.description }} {% else %} {{ site.meta_description }} {% endif %}" />
 
   <!-- Open Graph Data -->
-  <meta name="og:title" content="{{ site.name }}{% if page.title %} - {{ page.title }}{% endif %}">  
-  <meta name="og:description" content="{% if page.description %} {{ page.description }} {% else %} {{ site.meta_description }} {% endif %}">
-  <meta name="og:type" content="{% if page.og_content %} {{ page.og_content }} {% else %} website {% endif %}">
-  <meta name="og:url" content="{{ site.url }}{% if page.url %}{{ page.url }}{% endif %}">
-  <meta name="og:image" content="{{ site.url }}/assets/images/avatar@fb.png">
-  <meta name="og:site_name" content="{{ site.name }} - {{ site.description }}">
+  <meta name="og:title" content="{{ site.name }}{% if page.title %} - {{ page.title }}{% endif %}" />  
+  <meta name="og:description" content="{% if page.description %} {{ page.description }} {% else %} {{ site.meta_description }} {% endif %}" />
+  <meta name="og:type" content="{% if page.og_content %} {{ page.og_content }} {% else %} website {% endif %}" />
+  <meta name="og:url" content="{{ site.url }}{% if page.url %}{{ page.url }}{% endif %}" />
+  <meta name="og:image" content="{{ site.url }}/assets/images/avatar@fb.png" />
+  <meta name="og:site_name" content="{{ site.name }} - {{ site.description }}" />
 
   <link rel="shortcut icon" href="{{ site.baseurl }}assets/images/favicon.ico">
   <link rel="stylesheet" href="{{ site.baseurl }}assets/css/style.css">
