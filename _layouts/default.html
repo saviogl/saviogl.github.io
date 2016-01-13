@@ -12,7 +12,7 @@
   <meta property="og:title" content="{{ site.name }}{% if page.title %} - {{ page.title }}{% endif %}">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.meta_description }}{% endif %}">
   <meta property="og:type" content="{% if page.og_content %}{{ page.og_content }}{% else %}website{% endif %}">
-  <meta property="og:url" content="{{ site.url }}{% if page.url %}{{ page.url }}{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{% if page.url != '/index.html' %}{{ page.url }}{% endif %}">
   <meta property="og:image" content="{{ site.url }}/assets/images/avatar@fb.png">
   <meta property="og:site_name" content="{{ site.name }} - {{ site.description }}">
 
