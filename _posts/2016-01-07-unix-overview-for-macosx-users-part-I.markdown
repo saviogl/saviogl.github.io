@@ -96,7 +96,7 @@ A typical Unix directory structure is shown below:
 | /lib  																			| Libraries of code
 | /tmp  																			| Temporary files
 | /var  																			| Various (mostly files the system uses)
-| /usr;/usr/bin;/usr/etc;/usr/lib;/usr/local  | User programs, tools and libraries (not files)
+| /usr, /usr/bin, /usr/etc, /usr/lib, /usr/local  | User programs, tools and libraries (not files)
 
 # Until next post
 
