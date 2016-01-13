@@ -1,11 +1,11 @@
 name: Sávio Lucena
 description: Exploring the world of web development
-meta_description: "Sávio Lucena Jekyll Site, Exploring the world of web development"
+meta_description: 'Sávio Lucena Jekyll Site, Exploring the world of web development'
 
 aboutPage: true
 
 markdown: redcarpet
-redcarpet: 
+redcarpet:
  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 highlighter: pygments
 gems: [jekyll-paginate]

@@ -2,6 +2,7 @@
 title: About
 permalink: about/
 profile: true
+og_content: profile
 ---
 
 My name is Sávio Guerra Lucena I was born in [Salvador, Bahia, Brazil](https://www.google.com.br/maps/place/Salvador+-+State+of+Bahia/@-12.8808976,-38.5576733,11z/data=!3m1!4b1!4m2!3m1!1s0x716037ca23ca5b3:0x1b9fc7912c226698?hl=en) and I'm a Software Engineer at [Comunidade de Práticas](https://atencaobasica.org.br).
