@@ -21,6 +21,8 @@ url:            'http://saviolucena.com'
 author:         'Sávio Lucena'
 # authorTwitter:  'YourTwitterUsername'
 
+email:          'saviogl@gmail.com'
+
 permalink:       /:year/:title/
 
 defaults:

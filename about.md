@@ -17,6 +17,6 @@ After working at Accenture for five years and with the rise of mobile developmen
 
 Feeling the need to face new challenges and explore the latest technologies in the area I joined Comunidade de Práticas.
 
-If you would like to get in touch, feel free to send me an [email](mailto:saviogl@gmail.com).
+If you would like to get in touch, feel free to send me an [email](mailto:{{ site.email }}).
 
 {% include footer.html %}
