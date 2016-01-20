@@ -13,7 +13,7 @@ paginate: 20
 baseurl: /
 domain_name: 'http://saviolucena.com'
 google_analytics: 'UA-72132341-1'
-disqus: false
+disqus: true
 disqus_shortname: 'saviolucena'
 
 # Details for the RSS feed generator
