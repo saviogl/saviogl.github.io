@@ -4,13 +4,13 @@ date: 2016-01-20 15:46:00
 description: A Unix basic overview to allow Mac OS X users understand the powerfull operating system underneath Mac OS X - Walking through Unix filesystem (cd, touch, cat, mkdir, mv, rm, cp, etc.)
 ---
 
-Picking it up from where we left on the previous post, it's time to start manipulating files and directories through the unix filesystem.
+Picking up from where we left off in the previous post, it's time to start manipulating files and directories through the unix filesystem.
 
 #Changing Directories
-The first thing that we have to learn before getting down to files and directories manipulation is how to walk through the Unix filesystem. To do so you make use of the ***cd*** (aka chdir - Change Directory) utility. Executing this command will change the current working directory to whatever path argument you pass to it.
+The first thing that we have to learn before getting down to file and directory manipulation is how to walk through the Unix filesystem. To do so you make use of the ***cd*** (aka chdir - Change Directory) utility. Executing this command will change the current working directory to whatever path argument you pass to it.
 
 {% highlight bash %}
-$ cd test # This will walk you in the 'test' folder and become the current working directory
+$ cd test # This will walk you to the 'test' folder and make it the current directory
 {% endhighlight %}
 
 To walk out of a directory you execute the ***cd*** command with the '***..***'' argument like this:
@@ -21,7 +21,7 @@ $ cd .. # This will walk you out to the parent directory of the current tree
 There are a couple of default arguments that are used as shortcuts to change directories. ***cd ~*** will take you to the user's directory, and ***cd -*** will toggle you back and forth to the last working directory.
 
 #Creating Files
-In an Unix based system you have three simple ways for creating files from the terminal's command line:
+In a Unix based system you have three simple ways for creating files from the terminal's command line:
 
 * Unix text editors
 
@@ -30,24 +30,24 @@ In an Unix based system you have three simple ways for creating files from the t
 * The ***touch*** command
 
 ##Unix Text Editors
-A text editor basically lets you add, change, and rearrange text easily through the terminal's command line. There are some options included with the Mac OSx:
+A text editor basically lets you add, change, and rearrange text easily through the terminal's command line. There are some options included with the Mac OS X:
 
 ###vi (Visual Editing Mode), vim (Improved version of vi)
 ![Visual Editing Mode](/assets/images/vim.png)
-It's been around for a long time and it's many people's favorite, but faces some user-friendliness problem. Altough the enhanced version of it (vim) offers extensions to add extras functionalities; e.g., *syntax highlighting*, *new editing commands*, and even *mouse support*, to mitigate that problem.
+It's been around for a long time and it's many people's favorite, but faces some user-friendliness problems. Although the enhanced version of it (vim) offers extensions to add extras functionalities; e.g., *syntax highlighting*, *new editing commands*, and even *mouse support*, to mitigate that problem.
 ###emacs (Editor Macros)
 ![Editor Macros](/assets/images/emacs.png)
-Probably the most powerfull text editor out there. It's referred as the swiss army knife by many due to extensive capabilities and the ability of creating macros to automate recurrent tasks.
+Probably the most powerful text editor out there. It's referred to as the swiss army knife by many due to its extensive capabilities and the ability to create macros to automate recurrent tasks.
 ###pico (Pine Composer), nano (Improved version of pico)
 ![Nano](/assets/images/nano.png)
-It has all the basics editing features, and it's probably the easiest to learn. nano, the enhanced version of pico, is my personal favorite to do simple and basic text editing due to its simplicity and limited commands.
+It has all the basic editing features, and it's probably the easiest to learn. nano, the enhanced version of pico, is my personal favorite to do simple and basic text editing due to its simplicity and limited commands.
 
-These are just a few options that come out of the box with your operating system, if you would like to check them all you could go over [this](https://en.wikipedia.org/wiki/List_of_text_editors) Wikipedia page.
+These are just a few options that come out of the box with your operating system, if you would like to check them all you could go over to [this](https://en.wikipedia.org/wiki/List_of_text_editors) Wikipedia page.
 
 ##Direct output to a file (Output Redirection)
-We're going to dig deeper into this topic on another post in the future, but for now you only need to know that you can also create a file by redirecting the output of a command, using the ***'>'*** operator.
+We're going to dig deeper into this topic in another post in the future, but for now you only need to know that you can also create a file by redirecting the output of a command, using the ***'>'*** operator.
 
-Check following **who** command which redirects complete output of the command to a file named users in the current directory.
+Check following **who** command which redirects the complete output of the command to a file named users in the current directory.
 {% highlight bash %}
 $ who > users
 $
@@ -92,7 +92,7 @@ $
 {% endhighlight %}
 
 ##The ***touch*** command
-The *touch* command is the easiest way to create new, empty files. It's also vastly used as a way to update the ***timestamps*** (i.e., dates and times of the most recent access and modification) on existing files and directories.
+The *touch* command is the easiest way to create new, empty files. It's also widely used as a way to update the ***timestamps*** (i.e., dates and times of the most recent access and modification) on existing files and directories.
 
 To create a file simply execute the *touch* command followed by a file's name:
 {% highlight bash %}
@@ -105,7 +105,7 @@ $ ls -l
 $
 {% endhighlight %}
 
-If you run the same command again the ***timestamp*** of that file will be updated with the current day and time:
+If you run the same command again the ***timestamp*** of that file will be updated with the current date and time:
 {% highlight bash %}
 $ touch new_file
 {% endhighlight %}
@@ -117,7 +117,7 @@ $
 {% endhighlight %}
 
 #Reading Files
-The most basic and simplest way of reading files on Unix systems is through the use of the ***cat*** command. The ***cat*** command reads one or more files and prints them to standard output. Let's take the previous created **'users'** file and try to run the ***cat*** command with it.
+The most basic and simple way of reading files on Unix is through the use of the ***cat*** command. The ***cat*** command reads one or more files and prints them to standard output. Let's take the previous created **'users'** file and try to run the ***cat*** command with it.
 {% highlight bash %}
 $ cat users
 userone console  Jan  4 20:12
@@ -130,23 +130,23 @@ userone ttys005  Jan 19 08:36
 userone ttys007  Jan 19 16:04
 $
 {% endhighlight %}
-All the contents of the file has been printed out to the standard output.
+All the contents of the file have been printed out to the standard output.
 
-Altough ***cat*** comes in hand a lot of times it might not be the best way for reading long text files, since it outputs all the contents to the screen at once and you might lose track of what you're looking for. To better handle the examinations of those files you can use either ***more*** or ***less*** command.
+Although ***cat*** comes in handy a lot of times it might not be the best way for reading long text files, since it outputs all the contents to the screen at once and you might lose track of what you're looking for. To better handle the examination of those files you can use either ***more*** or ***less*** command.
 
-Both these commands perform similar functions as they allow to see the text file one "page" at a time (Paginated output) i.e., "page" being the amount of content that fits the current terminal window screen. You use the **'spacebar'** to continue paging, **'enter'** key will move down one line, and **'q'** to quit. ***less*** was later developed and has more features than ***more***. The most useful feature is that it can scroll backwards **'(crtl + b)'** and can jump between the beginning **'(g)'** and the end **'(shift + g)'** of the document.
+Both these commands perform similar functions as they allow you to see the text file one "page" at a time (Paginated output) i.e., "page" being the amount of content that fits the current terminal window screen. You use the **'spacebar'** to continue paging, **'enter'** key will move down one line, and **'q'** to quit. ***less*** was developed later and has more features than ***more***. The most useful feature is that it can scroll backwards **'(crtl + b)'** and can jump between the beginning **'(g)'** and the end **'(shift + g)'** of the document.
 
 ![Less](/assets/images/less.png)
 
 In the Darwin Unix system the command ***more*** actually calls ***less*** behind the scenes since it has more features and better memory usage.
 
-##Reading Portion of Files
-Two orders useful commands to examinate portions of files are ***head*** and ***tail*** where one reads the first few lines (***head***), and the other reads the final (***tail***) few lines of any text given to it as input and write them to the standard output.
+##Reading Portions of Files
+Two useful commands to examine portions of files are ***head*** and ***tail*** where one reads the first few lines (***head***), and the other reads the final (***tail***) few lines of any text given to it as input and write them to the standard output.
 
 {% highlight bash %}
 #The head command by default prints the first 10 lines of the document
 # but you can change this number with the -n option
-#Prints the first two lines of users's file
+#Prints the first two lines of the users file
 $ head -n 2 users
 userone console  Jan  4 20:12
 userone ttys000  Jan 13 15:56
@@ -156,7 +156,7 @@ $
 {% highlight bash %}
 #The tail command by default prints the last 10 lines of the document
 # but you can change this number with the -n option
-#Prints the last two lines of users's file
+#Prints the last two lines of the users file
 $ tail -n 2 users
 userone ttys005  Jan 19 08:36
 userone ttys007  Jan 19 16:04
@@ -181,7 +181,7 @@ userone ttys007  Jan 19 16:04
 {% endhighlight %}
 
 #Making Directories
-To create new directories on Unix system you make use of the ***mkdir*** utility.
+To create new directories on Unix you make use of the ***mkdir*** utility.
 
 {% highlight bash %}
 $ mkdir new_folder
@@ -196,7 +196,7 @@ $
 {% endhighlight %}
 
 
-***mkdir*** will prompt an error message if you try to create nested folders where any of the parent directories does not exist.
+***mkdir*** will prompt an error message if you try to create nested folders where any of the parent directories do not exist.
 
 {% highlight bash %}
 $ mkdir new_folder/nested1/nested2
@@ -204,7 +204,7 @@ mkdir: new_folder/nested1: No such file or directory
 $
 {% endhighlight %}
 
-To enable creation of needed parents directories just include the ***-p*** option
+To enable creation of the necessary parent directories just include the ***-p*** option
 
 {% highlight bash %}
 $ mkdir -p new_folder/nested1/nested2
@@ -212,7 +212,7 @@ $
 {% endhighlight %}
 
 #Moving and Renaming Files and Directories
-To accomplish both operation the same Unix command is used ***mv***. Both operations follow the same pattern:
+To accomplish both operations the same Unix command is used, ***mv***. Both operations follow the same pattern:
 
 {% highlight bash %}
 $ mv [SOURCE] [DEST]
@@ -241,10 +241,10 @@ drwxr-xr-x  3 userone  staff  102 Jan 19 21:55 nested1
 -rw-r--r--  1 userone  staff  280 Jan 19 17:11 new_users # new_users has been moved inside new_folder
 {% endhighlight %}
 
-> ***mv*** is set by default to overwrite (***-f***) files/folders, to prevent overwriting use the (***-n***) option, or for interactive overwriting (ask permission) use the (***-i***) option.
+> ***mv*** is set by default to overwrite (***-f***) files/folders, to prevent overwriting use the (***-n***) option, or for interactive overwriting (asks for permission) use the (***-i***) option.
 
 #Copying Files and Directories
-***cp*** command is the one to use to copy files or directories. For instance, let's say that you want to make a copy of a file called **new_file** as name it **cp_new_file**. You would run the command:
+***cp*** command is the one to use to copy files or directories. For instance, let's say that you want to make a copy of a file called **new_file** and name it **cp_new_file**. You would run the command:
 
 {% highlight bash %}
 #Copying file
@@ -275,29 +275,29 @@ drwxr-xr-x  4 userone  staff   136 Jan 19 22:14 new_folder
 $
 {% endhighlight %}
 
-> ***cp*** is set by default to overwrite (***-f***) files/folders, to prevent overwriting use the (***-n***) option, or for interactive overwriting (ask permission) use the (***-i***) option.
+> ***cp*** is set by default to overwrite (***-f***) files/folders, to prevent overwriting use the (***-n***) option, or for interactive overwriting (asks for permission) use the (***-i***) option.
 
 #Removing Files and Directories
-To remove unwanted files on Unix system use ***rm/unlink*** command. Let's say that we don't want that **new_file** copy created on the previous topic, we can remove the file runnnig the following command:
+To remove unwanted files on a Unix system use the ***rm/unlink*** command. Let's say that we don't want that **new_file** copy created in the previous topic, we can remove the file by runnnig the following command:
 
 {% highlight bash %}
 #Removing file
 $ rm cp_new_file
 {% endhighlight %}
 
-To remove directory and all its files run the same command using the ***-R(-r)*** option which indicates recursive operation.
+To remove a directory and all its files, run the same command using the ***-R(-r)*** option which indicates recursive operation.
 
 {% highlight bash %}
 #Removing non empty directory
 $ rm -R cp_new_folder
 {% endhighlight %}
 
-There is another command that you could use to remove directories ***rmdir***, but it will only go through with the operation if the target directory is empty.
+There is another command that you could use to remove directories, ***rmdir***, but it will only go through with the operation if the target directory is empty.
 
 #Hard Links
-When performing a listing in a directory on Unix systems the listing is actually a list of references that map to an [inode](https://en.wikipedia.org/wiki/Inode) (i.e., a data structure that represents a filesystem object which contains attributes and disk block location(s) of the object's data). When a hard link is created it becomes yet another reference to that same inode as the original file, and you end up with two exact files without having to duplicate the data on disk.
+When performing a listing in a directory on Unix the listing is actually a list of references that map to an [inode](https://en.wikipedia.org/wiki/Inode) (i.e., a data structure that represents a filesystem object which contains attributes and disk block location(s) of the object's data). When a hard link is created it becomes yet another reference to that same inode as the original file, and you end up with two exact files without having to duplicate the data on disk.
 
-Taking that into account a hard link does not break if the original file is moved nor even if it's deleted since it references the file in the actual hard drive. However, take note that if you are modifying the hard link you are in turn modifying the original file as well (vice-versa) since both reference the same inode.
+Taking that into account a hard link does not break if the original file is moved nor even if it's deleted since it references the file in the actual hard drive. However, take note that if you are modifying the hard link you are in turn modifying the original file as well (and vice-versa) since both reference the same inode.
 
 {% highlight bash %}
 #Creating a hard link
@@ -329,12 +329,12 @@ drwxr-xr-x  4 userone  staff   136 Jan 19 22:14 new_folder
 lrwxr-xr-x  1 userone  staff     8 Jan 20 14:08 symlink_to_new_file -> new_file
 {% endhighlight %}
 
-Diferent from hard links, symbolic links break if the original file or path is moved or deleted.
+Different from hard links, symbolic links break if the original file or path is moved or deleted.
 
->When a symbolic link is created it's listed as a l file ***(l)***, not a regular file ***(-)***.
+>When a symbolic link is created it's listed as an l file ***(l)***, not a regular file ***(-)***.
 
 #Searching for Files and Directories
-When it comes to finding files or directories in the terminal's command line ***find*** is the one to rely upon. It's a very powerful utility and can search the entire filesystem to find files and directories according to an specific search criteria.
+When it comes to finding files or directories in the terminal's command line ***find*** is the one to rely on. It's a very powerful utility and can search the entire filesystem to find files and directories according to a specific search criteria.
 
 {% highlight bash %}
 #Basic find command pattern
@@ -357,12 +357,15 @@ The operator ***\**** works as a wildcard meaning zero or more characters. Besid
 - **?** | any one character
 -	**[]** | any character in the brackets
 
-As I've said it before ***find*** is an extremaly powerfull tool for unix system users and you definitely want to check the ***man*** page for that utility to harnest its full power, however ther is one another useful feature of ***find*** that I think that is worth mentioning here the ***-exec*** operator. You see, besides listing the files that you are searching for ***find*** allows you to execute commands (***grep***, ***rm***, ***mv***, etc.) on them without having to pipe its output.
+<br/>
+As I've said before, ***find*** is an extremely powerful tool for Unix users and you'll definitely want to check the ***man*** page for that utility to harness its full power. However there is one other useful feature of ***find*** that I think is worth mentioning here, the ***-exec*** operator. You see, besides listing the files that you are searching for, ***find*** allows you to execute commands (***grep***, ***rm***, ***mv***, etc.) on them without having to ***pipe**** its output.
 
 {% highlight bash %}
 #Find and -exec
 $ find . -name new_file -type f -exec rm {} ';' # Find the file named 'new_file', and remove it from the filesystem
 {% endhighlight %}
 
-#Until next post
-On this post we explored several utilities to work around the Unix filesystem. Those utilities are pretty much used on a daily basis for most developers that own an Unix system machine, or anyone that have to work your way around Unix based servers, therefore mastering them will help you grow as a better professional and will allow you to better understand your work enviroment.
+> ****pipe*** (|) is an operator that allows you to take the output of a command and insert it as the input of other command. We're going to cover it in a future post when we'll talk more about commands and programs, and directing input and output.
+
+#Until the next post
+In this post we explored several utilities for working on the Unix filesystem. Those utilities are pretty much used on a daily basis for most developers that own a Unix machine, or anyone that has to work their way around Unix based servers, therefore mastering them will help you grow professionally and will allow you to better understand your work environment.
