@@ -1,7 +1,7 @@
 ---
 title:  "Unix overview for Mac OS X users - Part II"
 date: 2016-01-20 15:46:00
-description: A Unix basic overview to allow Mac OS X users understand the powerfull operating system underneath Mac OS X - Walking through Unix filesystem (cd, touch, cat, mkdir, mv, rm, cp, etc.)
+description: A Unix basic overview to allow Mac OS X users understand the powerful operating system underneath Mac OS X - Walking through Unix filesystem (cd, touch, cat, mkdir, mv, rm, cp, etc.)
 ---
 
 Picking up from where we left off in the previous post, it's time to start manipulating files and directories through the unix filesystem.
