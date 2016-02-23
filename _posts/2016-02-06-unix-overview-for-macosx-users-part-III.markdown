@@ -4,7 +4,7 @@ date:   2016-02-06 22:43:00
 description: A Unix basic overview to allow Mac OS X users understand the powerful operating system underneath Mac OS X - Ownership, Permissions and the ROOT user.
 ---
 
-So, today I'm going to cover some important topics about Unix. I'll talk about a few things that you probably are dealing with on a daily basis, not fully understand its concept or how it works, but you just suck it up "follow" the instructions to get by and achieve your end goal. I'll talk about Ownership, Permissions and the **root** user.
+So, today I'm going to cover some important topics about Unix. I'll talk about a few things that you are probably dealing with on a daily basis, without fully understanding its concept or how it works, but you just suck it up "follow" the instructions to get by and achieve your end goal. I'll talk about Ownership, Permissions and the **root** user.
 
 Before we dive into those topics I think it's important to cover some fundamental concepts.
 
@@ -16,7 +16,7 @@ In a basic Unix environment all the users created are given a "home" directory u
 ![Darwin home directory](/assets/images/user_home_directory.png)
 
 #Groups
->*Users can be organized in groups. A user may belong to one or more groups of users. The concept of groups serves the purpose of assigning sets of privileges for a given resource and sharing them among many users that need to have them. (perhaps because they are all members of a project working team and they all need access to some common project files) So, on my system user 'nick' and user 'www' both belong to the group 'perlfect'. This way, they can have some shared privileges over the files for this site. User 'nick' needs them to edit the site, and user 'www' needs them to manage the webserver that will be publishing the site.*
+>*Users can be organized in groups. A user may belong to one or more groups of users. The concept of groups serves the purpose of assigning sets of privileges for a given resource and sharing them among many users that need to have them (perhaps because they are all members of a project working team and they all need access to some common project files). So, on my system user 'nick' and user 'www' both belong to the group 'perlfect'. This way, they can have some shared privileges over the files for this site. User 'nick' needs them to edit the site, and user 'www' needs them to manage the webserver that will be publishing the site.*
 
 The utility ***groups*** will list all the groups to which you (or the optionally specified user) belong.
 
@@ -27,7 +27,7 @@ $ staff com.apple.sharepoint.group.1 wheel everyone localaccounts _appserverusr 
 {% endhighlight %}
 
 #Ownership
-Ok, now that we've gone trough those concepts we are read to kick things off. So, every file/directory on Unix has an **owner user** and an **owner group** mapped to it.
+Ok, now that we've gone through those concepts we are ready to kick things off. So, every file/directory on Unix has an **owner user** and an **owner group** mapped to it.
 
 ![Ownership listing command](/assets/images/user_home_directory_marked.png)
 
@@ -35,7 +35,7 @@ As you can see on the image above, executing the command ***ls*** with the ***-l
 
 - 'user' **owns the file**,
 - 'user' is **a member of the group that owns the file**, and
-- 'user' is neither the user, nor belonging to the group that owns a file;
+- 'user' is neither the user, nor belongs to the group that owns a file;
 
 <br/>
 
@@ -71,23 +71,23 @@ $ chown newuser:everyone example
 {% endhighlight %}
 
 For directories this command will only change the directory ownership, to affect all the file hierarchy rooted in the directory you need to execute with the option ***-R(-r)***
-> There's another utility to change groups ownership called ***chgrp***, but as ***chown*** takes care of both cases it's the most preferred.
+> There's another utility to change groups ownership called ***chgrp***, but as ***chown*** takes care of both cases it's the preferred option.
 
 #Permissions
 Every file on the system has associated with it a set of permissions. Permissions tell Unix what can be done with that file and by whom. There are three things you can (or can't) do with a given file:
 
 - **read** it,
 - **write** (modify) it, and
-- **execute** it. (For directories think of this as a traverse permission, allowing you to search inside the directory and changing into it)
+- **execute** it. (For directories think of this as a traverse permission, allowing you to search inside the directory and change into it)
 
 <br/>
 
-Unix permissions specify which of the above operations can be performed for any ownership relation with respect to the file. In simpler terms, what can the owner do, what can the owner group do, and what can everybody else do with the file. For each ownership relation we'll need a set of three bits to specify access permission: read(**r**), write(**w**), and execute(**x**). To map all the 3 possible relations we'll need a triplet for each, hence nine bits. To mark a set bit we use its corresponding letter (**r**, **w** or **x**), and to mark a clear bit we user a dash (-). Putting it all together in one row gives us the complete permissions of a file.
+Unix permissions specify which of the above operations can be performed for any ownership relation with respect to the file. In simpler terms, what the owner can do, what the owner group can do, and what everybody else can do with the file. For each ownership relation we'll need a set of three bits to specify access permission: read(**r**), write(**w**), and execute(**x**). To map all 3 possible relations we'll need a triplet for each, hence nine bits. To mark a set bit we use its corresponding letter (**r**, **w** or **x**), and to mark a clear bit we use a dash (-). Putting it all together in one row gives us the complete permissions of a file.
 
 ![Permission](/assets/images/permissions.png)
 > The colors are mapping which permission set correspond to which ownership relation
 
-So, in the above example the owner user has the read and write permissions and the owner group, as well as other users, have only the read permission.
+So, in the above example, the owner user has the read and write permissions and the owner group, as well as other users, have only the read permission.
 
 ##Changing Permissions
 To set/modify a file or directory permissions you need to use the **chmod** program. Of course, only the owner of a file may use **chmod** to alter a file's permissions.
@@ -95,7 +95,7 @@ To set/modify a file or directory permissions you need to use the **chmod** prog
 $ chmod [options] mode filename
 {% endhighlight %}
 
-The 'mode part specifies how the permissions are going to be changed. It's composed by two parts, the first stating which user's permission should be changed and the second stating which access type should be changed. Let's say for example:
+The remove part specifies how the permissions are going to be changed. It's composed of two parts, the first stating which user's permission should be changed and the second stating which access type should be changed. Let's say for example:
 {% highlight bash %}
 $ chmod ugo=rwx example
 {% endhighlight %}
@@ -141,11 +141,11 @@ $ -rwxrw-r--   1 saviolucena  everyone     0B Feb  6 17:21 example
 That's probably the most preferred way for developers to set permissions on Unix.
 
 #The *root* user
-**root** is the user name or account that by default has access to all commands and files on a Unix-like operating system. It is also referred to as the ***root account***, ***root user*** and the ***superuser***. On a Mac OS x the root user is disabled by default. It's an important Unix concept and you probably have heard or will hear a lot of references to it. Remote Unix servers provided nowadays by several cloud infrastructure services usually have the ***root*** user enabled and your first access to them is through this user.
+**root** is the user name or account that by default has access to all commands and files on a Unix-like operating system. It is also referred to as the ***root account***, ***root user*** and the ***superuser***. On a Mac OS X the root user is disabled by default. It's an important Unix concept and you probably have heard or will hear a lot of references to it. Remote Unix servers provided nowadays by several cloud infrastructure services usually have the ***root*** user enabled and your first access to them is through this user.
 >Attention! It's not recommended to run your services under the ***root*** user, it's a better practice to run them on a user level and leave administrative tasks to the root user, and only on a per-need basis.
 
 ## SUDO
-Sudo (substitute user and do) allows a system administrator to give certain users (or group of users) the ability to run some (or all) command as root, or any other user while logging all commands and arguments. Sudo operates on a per-command basis, to make use of it just prefix a command with sudo. For instance:
+Sudo (substitute user and do) allows a system administrator to give certain users (or group of users) the ability to run some (or all) commands as root, or any other user while logging all commands and arguments. Sudo operates on a per-command basis, to make use of it just prefix a command with sudo. For instance:
 {% highlight bash %}
 $ sudo ls -la
 {% endhighlight %}
@@ -168,4 +168,4 @@ This "*ticketing*" system prevents the problem of leaving a root shell where oth
 - Sudo's configuration file, the sudoers file, is setup in such a way that the same sudoers file may be used on many machines. This allows for central administration while keeping the flexibility to define a user's privileges on a per-host basis.
 
 #Until the next post
-Today, we've covered some fundamental concepts that orchestrates and support a Unix based system. I consider those concepts base and required knowledge for anyone who will work with web development nowadays given the fact that Unix based systems are by far the most preferred servers to deploy modern applications.
+Today, we've covered some fundamental concepts that orchestrate and support a Unix based system. I consider those concepts base and required knowledge for anyone who works with web development nowadays given the fact that Unix based systems are by far the most preferred servers to deploy modern applications.
