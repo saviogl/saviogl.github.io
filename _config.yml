@@ -4,10 +4,11 @@ meta_description: 'Exploring the world of web development'
 
 aboutPage: true
 
-markdown: redcarpet
-redcarpet:
- extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
-highlighter: pygments
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+highlighter: rouge
 gems: [jekyll-paginate]
 paginate: 20
 baseurl: /
@@ -15,6 +16,7 @@ domain_name: 'http://saviolucena.com'
 google_analytics: 'UA-72132341-1'
 disqus: true
 disqus_shortname: 'saviolucena'
+future: true
 
 # Details for the RSS feed generator
 url:            'http://saviolucena.com'
