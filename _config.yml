@@ -1,6 +1,6 @@
 name: Sávio Lucena
 description: Exploring the world of web development
-meta_description: 'Exploring the world of web development'
+meta_description: Exploring the world of web development
 
 aboutPage: true
 
@@ -9,23 +9,23 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 highlighter: rouge
-gems: [jekyll-paginate]
+gems: [jekyll-paginate, jekyll-sitemap]
 paginate: 20
-baseurl: /
-domain_name: 'http://saviolucena.com'
-google_analytics: 'UA-72132341-1'
+baseurl: 
+domain_name: http://saviolucena.com
+google_analytics: UA-72132341-1
 disqus: true
-disqus_shortname: 'saviolucena'
+disqus_shortname: saviolucena
 future: true
 
 # Details for the RSS feed generator
-url:            'http://saviolucena.com'
-author:         'Sávio Lucena'
+url: http://saviolucena.com
+author: Sávio Lucena
 # authorTwitter:  'YourTwitterUsername'
 
-email:          'saviogl@gmail.com'
+email: saviogl@gmail.com
 
-permalink:       /:year/:title/
+permalink: /:year/:title/
 
 defaults:
     -
