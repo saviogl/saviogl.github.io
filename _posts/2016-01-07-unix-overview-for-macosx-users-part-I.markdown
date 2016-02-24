@@ -4,7 +4,7 @@ date:   2016-01-07 21:00:00
 description: A Unix basic overview to allow Mac OS X users understand the powerful operating system underneath Mac OS X - Understanding the basics
 ---
 
-#Motivation
+# Motivation
 
 Working as a web developer I found myself typing a lot of Unix commands, either to install a new cli tool, or to scaffold a new project, or to override Unix file's permission and ownership, etc... Anyway the list goes on and on when it comes to the use of Unix commands in a web developer's work day. 
 
@@ -12,7 +12,7 @@ At some point I realized that I was dropping a bunch of commands on the terminal
 
 Deciding to fill that knowledge gap and to get more familiar with the system that operates my computer I resorted to the Internet to achieve that goal and this series of posts aim to share with you a little bit from what I've learned and hopefully help you better understand what you're doing.
 
-#Darwin
+# Darwin
 
 Unix is a multitask, multi-user operating system derived from AT&T Unix, developed in the 70s at the Bell Labs. Mac OS X is built on top of the [BSD](https://en.wikipedia.org/wiki/Berkeley_Software_Distribution)(Berkeley Software Distribution), a Unix distribution with some added developments from [NeXTSTEP](https://en.wikipedia.org/wiki/NeXTSTEP), and Apple itself. That customised version of Unix is called [Darwin](https://en.wikipedia.org/wiki/Darwin_(operating_system)), Apple’s Operating System.
 
@@ -26,7 +26,7 @@ Is the outer layer of the operating system and acts as an interface between the 
 
 Mac OS X comes set up with the [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) shell, but includes other choices.
 
-##Terminal
+## Terminal
 On the Mac OS X the default application that allows you to interact with the operating system is called "**Terminal**". It does so by providing a text-based command line interface running in conjunction with the Bash shell.
 
 ![Terminal screenshot](/assets/images/terminal.png)

@@ -6,7 +6,7 @@ description: A Unix basic overview to allow Mac OS X users understand the powerf
 
 Picking up from where we left off in the previous post, it's time to start manipulating files and directories through the unix filesystem.
 
-#Changing Directories
+# Changing Directories
 The first thing that we have to learn before getting down to file and directory manipulation is how to walk through the Unix filesystem. To do so you make use of the ***cd*** (aka chdir - Change Directory) utility. Executing this command will change the current working directory to whatever path argument you pass to it.
 
 {% highlight bash %}
@@ -20,7 +20,7 @@ $ cd .. # This will walk you out to the parent directory of the current tree
 
 There are a couple of default arguments that are used as shortcuts to change directories. ***cd ~*** will take you to the user's directory, and ***cd -*** will toggle you back and forth to the last working directory.
 
-#Creating Files
+# Creating Files
 In a Unix based system you have three simple ways for creating files from the terminal's command line:
 
 * Unix text editors
@@ -29,22 +29,22 @@ In a Unix based system you have three simple ways for creating files from the te
 
 * The ***touch*** command
 
-##Unix Text Editors
+## Unix Text Editors
 A text editor basically lets you add, change, and rearrange text easily through the terminal's command line. There are some options included with the Mac OS X:
 
-###vi (Visual Editing Mode), vim (Improved version of vi)
+### vi (Visual Editing Mode), vim (Improved version of vi)
 ![Visual Editing Mode](/assets/images/vim.png)
 It's been around for a long time and it's many people's favorite, but faces some user-friendliness problems. Although the enhanced version of it (vim) offers extensions to add extras functionalities; e.g., *syntax highlighting*, *new editing commands*, and even *mouse support*, to mitigate that problem.
-###emacs (Editor Macros)
+### emacs (Editor Macros)
 ![Editor Macros](/assets/images/emacs.png)
 Probably the most powerful text editor out there. It's referred to as the swiss army knife by many due to its extensive capabilities and the ability to create macros to automate recurrent tasks.
-###pico (Pine Composer), nano (Improved version of pico)
+### pico (Pine Composer), nano (Improved version of pico)
 ![Nano](/assets/images/nano.png)
 It has all the basic editing features, and it's probably the easiest to learn. nano, the enhanced version of pico, is my personal favorite to do simple and basic text editing due to its simplicity and limited commands.
 
 These are just a few options that come out of the box with your operating system, if you would like to check them all you could go over to [this](https://en.wikipedia.org/wiki/List_of_text_editors) Wikipedia page.
 
-##Direct output to a file (Output Redirection)
+## Direct output to a file (Output Redirection)
 We're going to dig deeper into this topic in another post in the future, but for now you only need to know that you can also create a file by redirecting the output of a command, using the ***'>'*** operator.
 
 Check following **who** command which redirects the complete output of the command to a file named users in the current directory.
@@ -91,7 +91,7 @@ line 2
 $
 {% endhighlight %}
 
-##The ***touch*** command
+## The ***touch*** command
 The *touch* command is the easiest way to create new, empty files. It's also widely used as a way to update the ***timestamps*** (i.e., dates and times of the most recent access and modification) on existing files and directories.
 
 To create a file simply execute the *touch* command followed by a file's name:
@@ -116,7 +116,7 @@ $ ls -l
 $
 {% endhighlight %}
 
-#Reading Files
+# Reading Files
 The most basic and simple way of reading files on Unix is through the use of the ***cat*** command. The ***cat*** command reads one or more files and prints them to standard output. Let's take the previous created **'users'** file and try to run the ***cat*** command with it.
 {% highlight bash %}
 $ cat users
@@ -140,7 +140,7 @@ Both these commands perform similar functions as they allow you to see the text 
 
 In the Darwin Unix system the command ***more*** actually calls ***less*** behind the scenes since it has more features and better memory usage.
 
-##Reading Portions of Files
+## Reading Portions of Files
 Two useful commands to examine portions of files are ***head*** and ***tail*** where one reads the first few lines (***head***), and the other reads the final (***tail***) few lines of any text given to it as input and write them to the standard output.
 
 {% highlight bash %}
@@ -180,7 +180,7 @@ userone ttys007  Jan 19 16:04
 #To redeem the prompt command just hit (crtl + c)
 {% endhighlight %}
 
-#Making Directories
+# Making Directories
 To create new directories on Unix you make use of the ***mkdir*** utility.
 
 {% highlight bash %}
@@ -211,7 +211,7 @@ $ mkdir -p new_folder/nested1/nested2
 $
 {% endhighlight %}
 
-#Moving and Renaming Files and Directories
+# Moving and Renaming Files and Directories
 To accomplish both operations the same Unix command is used, ***mv***. Both operations follow the same pattern:
 
 {% highlight bash %}
@@ -221,7 +221,7 @@ $ mv [SOURCE] [DEST]
 ***mv*** will decide to perform one operation or another based on the [DEST] argument. If [DEST] is an existing directory the utility will move all files/folders from [SOURCE] to [DEST], if not it'll simply rename the [SOURCE] operand to its new name.
 
 {% highlight bash %}
-#Renaming file
+# Renaming file
 $ mv users new_users
 $ ls -l
 total 16
@@ -233,7 +233,7 @@ drwxr-xr-x  3 userone  staff   102 Jan 19 21:55 new_folder
 {% endhighlight %}
 
 {% highlight bash %}
-#Moving file
+# Moving file
 $ mv new_users new_folder
 $ ls -l new_folder
 total 8
@@ -243,11 +243,11 @@ drwxr-xr-x  3 userone  staff  102 Jan 19 21:55 nested1
 
 > ***mv*** is set by default to overwrite (***-f***) files/folders, to prevent overwriting use the (***-n***) option, or for interactive overwriting (asks for permission) use the (***-i***) option.
 
-#Copying Files and Directories
+# Copying Files and Directories
 ***cp*** command is the one to use to copy files or directories. For instance, let's say that you want to make a copy of a file called **new_file** and name it **cp_new_file**. You would run the command:
 
 {% highlight bash %}
-#Copying file
+# Copying file
 $ cp new_file cp_new_file
 $ ls -l
 total 24
@@ -262,7 +262,7 @@ $
 To copy entire directory structures from one place to another you have to make use of the ***-R(-r)*** option which indicates recursive operation.
 
 {% highlight bash %}
-#Copying directory
+# Copying directory
 $ cp -R new_folder cp_new_folder
 $ ls -l
 total 24
@@ -277,7 +277,7 @@ $
 
 > ***cp*** is set by default to overwrite (***-f***) files/folders, to prevent overwriting use the (***-n***) option, or for interactive overwriting (asks for permission) use the (***-i***) option.
 
-#Removing Files and Directories
+# Removing Files and Directories
 To remove unwanted files on a Unix system use the ***rm/unlink*** command. Let's say that we don't want that **new_file** copy created in the previous topic, we can remove the file by runnnig the following command:
 
 {% highlight bash %}
@@ -294,7 +294,7 @@ $ rm -R cp_new_folder
 
 There is another command that you could use to remove directories, ***rmdir***, but it will only go through with the operation if the target directory is empty.
 
-#Hard Links
+# Hard Links
 When performing a listing in a directory on Unix the listing is actually a list of references that map to an [inode](https://en.wikipedia.org/wiki/Inode) (i.e., a data structure that represents a filesystem object which contains attributes and disk block location(s) of the object's data). When a hard link is created it becomes yet another reference to that same inode as the original file, and you end up with two exact files without having to duplicate the data on disk.
 
 Taking that into account a hard link does not break if the original file is moved nor even if it's deleted since it references the file in the actual hard drive. However, take note that if you are modifying the hard link you are in turn modifying the original file as well (and vice-versa) since both reference the same inode.
@@ -313,11 +313,11 @@ drwxr-xr-x   4 userone  staff   136B Jan 19 22:14 new_folder
 
 >When a hard link is created it's listed as a regular file ***(-)***, not a reference to it.
 
-#Symbolic Links (aka Symlinks)
+# Symbolic Links (aka Symlinks)
 A symbolic link is similar to a hard link in that it is used to link to an already existing file, however it differs greatly in its implementation. Whilst hard links reference to an inode, symbolic links just reference to a file or directory path acting as a pointer to the original file.
 
 {% highlight bash %}
-#Creating a symlink
+# Creating a symlink
 $ ln -s new_file symlink_to_new_file
 $ ls -l
 total 32
@@ -337,7 +337,7 @@ Different from hard links, symbolic links break if the original file or path is 
 When it comes to finding files or directories in the terminal's command line ***find*** is the one to rely on. It's a very powerful utility and can search the entire filesystem to find files and directories according to a specific search criteria.
 
 {% highlight bash %}
-#Basic find command pattern
+# Basic find command pattern
 $ find [path] [expression]
 $ find . -name new_file # Find all files and directories named 'new_file' within the current directory's tree
 ./new_file # File found
@@ -367,5 +367,5 @@ $ find . -name new_file -type f -exec rm {} ';' # Find the file named 'new_file'
 
 > ****pipe*** (|) is an operator that allows you to take the output of a command and insert it as the input of other command. We're going to cover it in a future post when we'll talk more about commands and programs, and directing input and output.
 
-#Until the next post
+# Until the next post
 In this post we explored several utilities for working on the Unix filesystem. Those utilities are pretty much used on a daily basis for most developers that own a Unix machine, or anyone that has to work their way around Unix based servers, therefore mastering them will help you grow professionally and will allow you to better understand your work environment.
