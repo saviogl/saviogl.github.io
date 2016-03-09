@@ -15,7 +15,7 @@ During that time I have interned at [Accenture](https://www.accenture.com) where
 
 After working at Accenture for five years and with the rise of mobile development and more complex web applications I got involved with the startup world and decided co-found two technology companies: [Brick](http://www.bricksoftwares.com) - a company that helps other business expand their operations via mobile applications, and Cient - a web based marketplace for online live classes. During this entire entrepreneurial journey I was always in charge of back end development, and server infrastructure.
 
-Feeling the need to face new challenges and explore the latest technologies in the area I joined Comunidade de Práticas.
+Feeling the need to face new challenges and explore the latest technologies in the area I joined the Brazilian Ministry of Health.
 
 If you would like to get in touch, feel free to send me an [email](mailto:{{ site.email }}).
 
