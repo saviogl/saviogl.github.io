@@ -4,7 +4,7 @@ date: 2016-02-23 15:16:00
 description: A Unix basic overview to allow Mac OS X users understand the powerful operating system underneath Mac OS X - Commands and Programs.
 ---
 
-We've seen that in order to interact with the kernel of the operating system and actually get things done we (user) type a set of words in the shell which is in charge of interpreting these words and sending them along to the kernel acting as an interface between the two parties. These set of words are called **commands** and they follow a simple and straightforward pattern:
+We've seen that in order to interact with the kernel of the operating system and actually get things done we (the user) type a set of words in the shell which is in charge of interpreting these words and sending them along to the kernel acting as an interface between the two parties. These set of words are called **commands** and they follow a simple and straightforward pattern:
 
 ``` bash
 command [option(s)] [argument(s)]
@@ -17,20 +17,20 @@ $ echo "Hello World"
 Hello World
 ```
 
-But, what is this command keyword? On Unix, to execute a file, one just need to type the filename. For instance, the command *echo "Hello World"* can be executed as **/bin/echo "Hello World"** and that is because ***echo*** resides in that file path (/etc/echo):
+But, what is this command keyword? On Unix, to execute a file, one just needs to type the filename. For instance, the command *echo "Hello World"* can be executed as **/bin/echo "Hello World"** and that is because ***echo*** resides in that file path (/etc/echo):
 
 ``` bash
 $ /bin/echo "Hello World"
 Hello World
 ```
 
-So to answer the previous question **commands** are essentially a shorthand and a more convenient way for going to these files and executing them.
+So to answer the previous question, **commands** are essentially a shorthand and a more convenient way for going to these files and executing them.
 
-A few basic and useful informations regarding commands:
+Some basic and useful information regarding commands:
 
 - Common options: **-v**, **--version**, **-h**, **--help**
 
-	> Usually all the major installable commands have those options built-in in them. -v and --version print on the standard output the current version of the command/program, where -h and --help print some usage information on how to proper use it, as well as some of its options
+	> Usually all the major installable commands have these options built-in. -v and --version print to the standard output the current version of the command/program, whereas -h and --help print some usage information on how to proper use it, as well as some of its options
 
 - Exit command: **q**, **x**, **ctrl + q**, or **ESC**
 
@@ -42,18 +42,18 @@ A few basic and useful informations regarding commands:
 
 - **whereis**, **which** and **whatis**
 
-	> These are useful commands to get a few basic information about other commands. **wheris** and **which** search and locate the executable file of a certain command and print out the file path on the standard output (There is a difference between these two check the man pages for both of them). **whatis** search a set of databases files of system commands for keywords and display the result on the standard output
+	> These are useful commands to get some basic information about other commands. **wheris** and **which** search and locate the executable file of a certain command and print out the file path to the standard output (There is a difference between these two, check the man pages for both of them). **whatis** searches a set of database files of system commands for keywords and displays the result on the standard output
 
 ## The PATH variable
 
-So if ***commands*** are essentially a shorthand for tracking files and execute them what is the logic that the shell uses to locate them? It would take forever if it would search the entire file tree, so Unix system has an environment variable set up called **PATH** which is a comma separated list of files paths that it uses to locate commands to execute.
+So if ***commands*** are essentially a shorthand for tracking files and executing them what is the logic that the shell uses to locate them? It would take forever if it would search the entire file tree, so Unix system has an environment variable set up called **PATH** which is a comma separated list of files paths that it uses to locate commands to execute.
 
 ``` bash
 $ echo $PATH
 /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 ```
 
-The early entries take precedence over the later ones, so it starts from the left and work all the way to the to right until it finds what it's looking for.
+The early entries take precedence over the later ones, so it starts from the left and works all the way to the to right until it finds what it's looking for.
 
 In **BASH** to change the **PATH** variable for the current shell session just use:
 
@@ -114,7 +114,7 @@ $ du -hs Documents
 1.4G	Documents
 ```
 
-## View Processes Informations
+## View Process Information
 
 - **ps** (process status) - Report a snapshot of the current processes
 
@@ -122,9 +122,9 @@ $ du -hs Documents
 $ ps aux
 ```
 
-> **a**: list all foreground process, owned by anyone; **u**: show a column with the process user starter; **x**: show background processes. Most common way to use it.
+> **a**: list all foreground processes, owned by anyone; **u**: show a column with the process user starter; **x**: show background processes. Most common way to use it.
 
-## Monitoring Processes Informations
+## Monitoring Process Information
 
 - **top** - Display Linux tasks, live monitor processes
 
@@ -160,7 +160,7 @@ ps c
 $ kill 24754
 ```
 
-The default behavior of the **kill** command is to send a SIGTERM signal to the running process. This gives the opportunity to the process to catch this event and perform its shutdown procedures to have terminate itself cleanly by closing all log files, connections, etc. If this not work, you could send a **kill** command with the **-9** option, which forces the process to shutdown without given the opportunity to handle anything prior to it.
+The default behavior of the **kill** command is to send a SIGTERM signal to the running process. This gives the opportunity to the process to catch this event and perform its shutdown procedures to terminate itself cleanly by closing all log files, connections, etc. If this does not work, you could send a **kill** command with the **-9** option, which forces the process to shutdown without giving the opportunity to handle anything prior to it.
 
 ## Text File Helpers
 
@@ -175,7 +175,7 @@ $ wc dump.rdb
 
 - **sort** - Sort lines
 
-> Capital letters are treated different from lower case letter. So if you want it to be sorted as the same value, pass in the **-f** option.
+> Capital letters are treated differently from lower case letters. So if you want it them to be sorted as the same values, pass in the **-f** option.
 
 ``` bash
 $ sort fruit.txt

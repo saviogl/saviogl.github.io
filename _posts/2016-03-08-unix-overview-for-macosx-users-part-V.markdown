@@ -4,7 +4,7 @@ date: 2016-03-08 22:16:32
 description: A Unix basic overview to allow Mac OS X users understand the powerful operating system underneath Mac OS X - Input/Output Redirection and Custom Working Environment.
 ---
 
-Today, we're going to explore a powerful computer programming concept which is heavily used and plays a big role in software development. Later, to wrap up this series of posts, we'll cover a little bit on how to customize your working environment and make things in a more personal way.
+Today, we're going to explore a powerful computer programming concept which is heavily used and plays a big role in software development. Then, to wrap up this series of posts, we'll cover a little bit on how to customize your working environment and make things more personal.
 
 # Standard Streams
 > In computer programming, **standard streams** are preconnected input and output communication channels between a computer program and its environment when it begins execution. The three I/O connections are called ***standard input (stdin)***, ***standard output (stdout)*** and ***standard error (stderr)***.
@@ -12,7 +12,7 @@ Today, we're going to explore a powerful computer programming concept which is h
 
 
 ## Unix
-On Unix, when executing a command, the **standard input** is connected to the terminal keyboard and the **standard output** and **error** are connected to the terminal screen (default behavior). However, Unix shell gives you the ability to change this preset behavior by a process called **Input/Output Redirection**. This is accomplished by making use of a few special characters, each defining an specific behavior.
+On Unix, when executing a command, the **standard input** is connected to the terminal keyboard and the **standard output** and **error** are connected to the terminal screen (default behavior). However, Unix shell gives you the ability to change this preset behavior by a process called **Input/Output Redirection**. This is accomplished by making use of a few special characters, each defining a specific behavior.
 
 ### Output Redirection
 
@@ -22,7 +22,7 @@ You can easily change the command's **standard output (stdout)** from the defaul
 $ who > users
 ```
 
-Notice that no output appears at the terminal. This is because the output has been redirected from the default standard output device (the terminal) into the specified file. If you would check ***users*** file you'll see all the outputted data provided by ***who***:
+Notice that no output appears on the terminal. This is because the output has been redirected from the default standard output device (the terminal) into the specified file. If you check ***users*** file you'll see all the outputted data provided by ***who***:
 
 ``` bash
 $ who > users
@@ -45,7 +45,7 @@ $ cat users
 19:10  up  5:02, 3 users, load averages: 1.02 1.39 1.51
 ```
 
-If you would like to append the new content to an existing file switch operators, using '***\>\>***' instead of '***>***':
+If you would like to append the new content to an existing file, switch operators, using '***\>\>***' instead of '***>***':
 
 ``` bash
 $ who > users
@@ -62,7 +62,7 @@ saviolucena ttys001  Mar  8 18:29
 ```
 
 ### Input Redirection
-The same way you can redirect the output of a command to a file, you can redirect its input from a file. As the greater-than character ***'>'***  is used for output redirection, the less-than character ***'<'*** is used to redirect the input of a command.
+In the same way as you can redirect the output of a command to a file, you can redirect its input from a file. As the greater-than character ***'>'***  is used for output redirection, the less-than character ***'<'*** is used to redirect the input of a command.
 
 To redirect **standard input** from a file instead of the keyboard:
 
@@ -79,7 +79,7 @@ saviolucena ttys000  Mar  8 17:06
 saviolucena ttys001  Mar  8 18:29
 ```
 
-We can see that we used the less-than character ***'<'*** to set the file as the **standard input (stdin)** for the command, and that the output was displayed on the terminal screen since we didn't make any changes (redirections) to it. We could have taken the results of the previous command and redirected its output to a specific file, for the matter of fact, lets do so.
+We can see that we used the less-than character ***'<'*** to set the file as the **standard input (stdin)** for the command, and that the output was displayed on the terminal screen since we didn't make any changes (redirections) to it. We could have taken the results of the previous command and redirected its output to a specific file, as a matter of fact, let's do so.
 
 ``` bash
 $ sort -l < users > sorted_users
@@ -189,7 +189,7 @@ John Doe
 
 As you can see, to reference the value of a variable you have to precede it with a **$** sign. The shell takes this to mean that it should substitute the value of the variable when it comes across this.
 
-Variables that we set during the current bash session will disappear once we log out of that session, so in order to make then available in every bash session we could add them to the **~/.bash_profile** or **~/.bashrc** files.
+Variables that we set during the current bash session will disappear once we log out of that session, so in order to make them available in every bash session we could add them to the **~/.bash_profile** or **~/.bashrc** files.
 
 Although the variables set in profile scripts will be shared amongst other bash sessions, they won't be available to child processes that bash starts for us. It will only be available in the current bash session. To indicate to bash these are environmental variables and should also be passed along to other commands, programs, and scripts (basically every time a new shell spawns) we need to use the export command.
 
@@ -205,7 +205,7 @@ $ printenv
 MYNAME=John Doe
 ...
 ```
-Amongst a bunch of other variables we can verify that our variable is now an environment variable, and every time a new shell spawns, it will be available for them. If we want to completely unset a variable, either shell or environmental, we can do so with the ***unset*** command:
+Among a bunch of other variables we can verify that our variable is now an environment variable, and every time a new shell spawns, it will be available for them. If we want to completely unset a variable, either shell or environmental, we can do so with the ***unset*** command:
 
 ``` bash
 $ unset MYNAME
@@ -226,7 +226,7 @@ $ PS1='command prompt $'
 command prompt $ # This has now become you command prompt
 ```
 
-Bash provides a set of escape sequences which allows you to easily embed system information into the command prompt. Check the following list for a short reference:
+Bash provides a set of escape sequences which allow you to easily embed system information into the command prompt. Check the following list for a short reference:
 
 |-----------------+---------------------------------------------------|
 | Escape Sequence | Description 																			|
@@ -257,5 +257,5 @@ saviolucena@Savios-MacBook-Pro:~/Documents$:
 
 And thus, we get a nice and customized command prompt.
 
-# Until next post
-Throughout this series of posts, we've explored a lot of Unix concepts and features, to get your started on this powerful operating system. However, we're just scratching the surface and there is much more to everything that I've said here. The idea was not to turn you into a Unix expert, but to introduce you to a new world (or make you more familiar to it), which I consider extremely important, and several times is taken for granted by many developers. 
+# Until the next post
+Throughout this series of posts, we've explored a lot of Unix concepts and features to get you started on this powerful operating system. However, we're just scratching the surface and there is much more to everything that I've said here. The idea was not to turn you into a Unix expert, but to introduce you to a new world (or make you more familiar to it), which I consider extremely important, and which many times is taken for granted by many developers. 
