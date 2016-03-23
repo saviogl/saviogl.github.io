@@ -96,7 +96,7 @@ MyEmitter.emit('hello world');
 
 If you run that code on the **console tab** of you browser's inspector, or as a Node.js script you will see the console.log outputted to the screen, meaning that when the **'hello world'** event was emitted you were notified and your **listener** responded to it.
 
-Of course this a very basic and raw implementation, it's not at all robust and **definitely not production ready!!!**, but it works and more important it lets you easily understand what is underneath one of the most used JavaScript event emitter library and get the gist on how events work in JavaScript, being nothing more than objects and keys full of array of functions being manipulated to mimic that **'event'** behavior.
+Of course this a very basic and raw implementation, it's not at all robust and **definitely not production ready!!!**, but it works and more importantly it lets you easily understand what is underneath one of the most used JavaScript event emitter library and get the gist on how events work in JavaScript, being nothing more than objects and keys full of array of functions being manipulated to mimic that **'event'** behavior.
 
 # Peeking at the Node.js EventEmitter library
 
