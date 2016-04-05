@@ -27,7 +27,7 @@ class Emitter {
 }
 ```
 
-Everything inside of the brackets is the body of a class, and that's where you define class members, such as methods or constructors.
+Everything inside of the curly brackets {} is the body of a class, and that's where you define class members, such as methods or constructors.
 
 ## Hoisting
 One important thing to mention when working with classes is that as opposed to functions declarations, class declarations are not [hoisted](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting) so you need to declare your class and then access it, otherwise it will throw ReferenceError.
