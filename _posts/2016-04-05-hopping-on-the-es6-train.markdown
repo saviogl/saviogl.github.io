@@ -8,7 +8,7 @@ Remember our [last post](http://saviolucena.com/2016/understanding-javascript-ev
 
 > [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) is a scripting-language specification standardized by an organization called Ecma International. JavaScript is one of the implementations of this language.
 
-Up to the day of this post the latest version of Node.js (v5.10.0) ships with **V8 (4.6.85.31)** engine which allows us to use [this](!https://nodejs.org/en/docs/es6/#which-features-ship-with-node-js-by-default-no-runtime-flag-required) set of features by default, without any additional runtime flags required. Today we'll take a brief look at three of those features:
+Up to the day of this post the latest version of Node.js (v5.10.0) ships with **V8 (4.6.85.31)** engine which allows us to use [this](https://nodejs.org/en/docs/es6/#which-features-ship-with-node-js-by-default-no-runtime-flag-required) set of features by default, without any additional runtime flags required. Today we'll take a brief look at three of those features:
 
 - Classes
 - Arrow Functions
